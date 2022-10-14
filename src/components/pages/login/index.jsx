@@ -7,7 +7,7 @@ import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-function Index() {
+function Login() {
   return (
     <div>
       <div className="containersign">
@@ -31,7 +31,7 @@ function Index() {
             </span>{" "}
           </button>
           <span className="forgot">
-            <span>Forget Credentials?</span>
+            <span>Forgot Credentials?</span>
           </span>
         </div>
       </div>
@@ -39,4 +39,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Login;
