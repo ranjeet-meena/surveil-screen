@@ -13,9 +13,10 @@ function Navbar() {
         <div className="leftnav">
 
         </div>
-
+   
     </nav>
   )
 }
+
 
 export default Navbar
