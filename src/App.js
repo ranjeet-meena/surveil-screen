@@ -1,13 +1,13 @@
 import "./App.css";
 
 import Navbar from "./components/navbar/Navbar";
-import Index from "./components/pages/login/Index";
+import Dashboard from './Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      {/* <Index /> */}
+  <Navbar/>
+  <Dashboard />
     </div>
   );
 }

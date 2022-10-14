@@ -1,0 +1,10 @@
+/* Dashboard */
+main.dashboard{
+    /* width: 88%; */
+    width: 60%;
+    height: 80vh;
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
