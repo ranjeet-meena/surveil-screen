@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 
 import "./style.css";
 import Checkbox from "@mui/material/Checkbox";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
+import { useNavigate } from "react-router-dom";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-function Login() {
+function Login({classnames, setClassnames}) {
+    const [loginSuccess, setLoginSuccess] = useState(false)
+    const navigate = useNavigate()
+    const Login = ()=>{
+        setLoginSuccess(true)
+        setClassnames({ loginSuccess: 'login-success', loadAfterLogin: '' })
+        setTimeout(()=>{
+             setClassnames({ loginSuccess: 'after-login', loadAfterLogin: 'after-login' })
+        },2000)
+    }
   return (
-    <div>
-      <div className="containersign">
+      <div className={loginSuccess ? "containersign login-success" :"containersign"}>
         <div className="textcontain">
           <TextField fullWidth id="standard-basic" label="" variant="standard" />
           <br />
@@ -22,7 +31,7 @@ function Login() {
           </span>
           {/* <br /> */}
 
-          <button className="buttonicon">
+          <button className="buttonicon" onClick={Login}>
             <h1>Sign In</h1>
             <span>
               <ArrowForwardOutlinedIcon
@@ -35,7 +44,6 @@ function Login() {
           </span>
         </div>
       </div>
-    </div>
   );
 }
 
