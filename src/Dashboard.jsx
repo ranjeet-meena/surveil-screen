@@ -1,10 +1,10 @@
 import React from 'react'
 import Login from './components/pages/login'
 
-function Dashboard() {
+function Dashboard({classnames, setClassnames}) {
   return (
     <main className='dashboard'>
-        <Login />
+        <Login classnames={classnames} setClassnames={setClassnames} />
     </main>
   )
 }
